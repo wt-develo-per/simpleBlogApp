@@ -3,7 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { getDBConnection } from './config/db.js';
 import blogRoutes from './routes/blogRoutes.js';
-import userRoutes from './routes/userRoutes.js';
+import userRoutes from './routes/userRoutes.js'; 
 import morgan from 'morgan';
 
 dotenv.config();
@@ -11,6 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 getDBConnection();
 
+// this is for development
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
